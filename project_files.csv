@@ -1,0 +1,41 @@
+path;description
+package.json;Projektmanifest, definiert Skripte, Abhängigkeiten und Metadaten für die Deltaflow-React/Vite-App.
+package-lock.json;Exakter Abhängigkeitsbaum von npm, der reproduzierbare Installationen in jeder Umgebung sicherstellt.
+tsconfig.json;Zentrale TypeScript-Compileroptionen für den Browser-Code (strenge Flags, Modulauflösung, Pfad-Aliase).
+tsconfig.node.json;TypeScript-Konfiguration für Node-Zielartefakte wie Vite-Konfig und Build-Tools.
+metadata.json;Laufzeit-Metadaten mit App-Namen, Beschreibung und Berechtigungsabfragen für gehostete Deployments.
+types.ts;Legacy-TypeScript-Schnittstellen für ADONIS-Modelle, die vom nicht-src-Build verwendet werden.
+vite.config.ts;Vite-Build/Dev-Konfiguration mit React-Plugin, Env-Injektion und Proxy-Definitionen für APIs.
+vite.config.d.ts;Ambient-Deklaration, damit TypeScript die Struktur des Vite-Konfigexports kennt.
+App.tsx;Legacy-Single-View-React-App, die ADONIS-Modelle auflistet und ein Optimierungsfenster anbietet.
+index.tsx;Legacy-ReactDOM-Bootstrapper, der die ältere App.tsx-Implementierung mountet.
+components/BPMNViewer.tsx;Legacy-BPMN-Viewer, der XML über die globale bpmn-js-Instanz rendert.
+components/Sidebar.tsx;Legacy-Sidebar-Baum zum Durchstöbern der ADONIS-Modellgruppen der alten UI.
+components/icons.tsx;Legacy-SVG-Iconset, das von den nicht-src-Komponenten geteilt wird.
+services/auth.ts;Legacy-Helfer, der ADONIS-REST-Aufrufe mit Web-Crypto-Headern signiert.
+services/adonisService.ts;Legacy-Datendienst, der ADONIS-Repositories über den /proxy-Endpunkt liest.
+services/geminiService.ts;Legacy-Google-Gemini-Integration, die das frühere UI zur BPMN-Optimierung nutzte.
+src/index.tsx;Aktueller React-Einstieg, der App im ErrorBoundary einbettet und mit ReactDOM mounted.
+src/App.tsx;Zentrales Anwendungsshell für Repository-Browsing, KI-Optimierung/-Erstellung und die UI-Logik.
+src/components/BPMNViewer.tsx;Moderner BPMN-Viewer, der die CDN-bpmn-js-Instanz nutzt und Diagramme einpasst.
+src/components/Sidebar.tsx;Skalierbare Navigations-Sidebar, die Gruppen/Modelle listet und Erstellungsaktionen anbietet.
+src/components/icons.tsx;Zentrales React-SVG-Iconset (inkl. animiertem Loader) für das neue UI.
+src/components/ConfigDialog.tsx;Modaldialog, über den Nutzer ADONIS/API-Zugangsdaten speichern oder überschreiben können.
+src/components/ErrorBoundary.tsx;Top-Level-React-Error-Boundary, die Renderfehler abfängt und eine Fallback-Meldung zeigt.
+src/hooks/useModelRepository.ts;Stateful Hook, der ADONIS-Gruppen/Modelle lädt, Expansionen verfolgt und Diagramm-XML lädt.
+src/hooks/useProcessCreation.ts;Wiederverwendbarer Hook für KI-gestützte Prozesserstellung inklusive Lade- und Statusverwaltung.
+src/hooks/useOptimization.ts;Hook, der KI-Optimierungen auf BPMN ausführt, Statusmeldungen rotiert und Dauer misst.
+src/hooks/useCycleMessages.ts;Utility-Hook, der eine Nachrichtenliste in festem Intervall durchläuft.
+src/hooks/useSpeechToText.ts;Kapselt die Web-Speech-API für Diktat, Zeichensetzung und das Einspeisen von Transkripten.
+src/services/auth.ts;Erzeugt signierte ADONIS-REST-Header (HMAC), die jede Frontend-Anfrage wiederverwenden kann.
+src/services/adonisService.ts;Primärer ADONIS-API-Client, der Gruppeninhalte und BPMN über den Proxy-Ursprung holt.
+src/services/adonisImportService.ts;Bereitet XML auf und importiert optimierte/erstellte BPMN-Diagramme zurück ins ADONIS-Repository.
+src/services/adonisApiConfig.ts;Gemeinsamer Resolver, der abhängig von Umgebungsflags zwischen Direkt- und Proxy-Aufrufen wählt.
+src/services/geminiService.ts;Google-Gemini-Client plus XML-Nachbearbeitung für Optimierungs-, Erstellungs- und Transkriptflüsse.
+src/services/openaiService.ts;OpenAI-Responses-API-Wrapper, der die Gemini-Workflows für OpenAI repliziert.
+src/services/anthropicService.ts;Anthropic-Claude-Integration mit denselben Create/Optimize/Transcript-Helfern.
+src/types.ts;Kanonische TypeScript-Interfaces für ADONIS-Gruppen/Modelle und Antwortstrukturen der neuen App.
+src/utils/env.ts;Liest Env-Variablen und LocalStorage-Overrides, damit die Laufzeitkonfiguration ohne Rebuild angepasst werden kann.
+src/utils/xml.ts;BPMN-XML-Helfer, die Kommentare entfernen, Erweiterungen strippen, Whitespace verdichten und DI sichern.
+src/utils/transcriptParser.ts;Parst hochgeladene Transkriptdateien (VTT/CSV/TXT) zu normalisiertem Text für die KI.
+src/vite-env.d.ts;Eigene Env-/Typ-Erweiterungen für Vite-Variablen, Speech-Recognition-Interfaces und process.env.

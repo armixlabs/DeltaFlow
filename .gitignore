@@ -1,0 +1,15 @@
+# Credentials and local configuration
+configparam*.txt
+.env
+.env.*
+env.txt
+
+# Dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+.DS_Store
+
+# Local notes
+resume.txt

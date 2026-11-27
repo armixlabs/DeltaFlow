@@ -1,0 +1,6 @@
+{
+  "name": "Deltaflow",
+  "description": "A web application to visualize, analyze, and optimize business processes using BPMN 2.0 diagrams and AI-powered suggestions from Gemini.",
+  "requestFramePermissions": [ "microphone" ],
+  "prompt": ""
+}
